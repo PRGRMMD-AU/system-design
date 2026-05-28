@@ -43,6 +43,7 @@ ACTIVE=$(cat .system/ACTIVE 2>/dev/null)
 [ ! -f ".system/$ACTIVE/MAP.md" ] && echo "ERROR: Run /system:map-system first" && exit 1
 [ ! -d ".system/$ACTIVE/flows" ] && echo "ERROR: Run /system:design-flows first" && exit 1
 [ ! -d ".system/$ACTIVE/feedback" ] && echo "ERROR: Run /system:design-feedback first" && exit 1
+[ ! -f ".system/$ACTIVE/INPUT-AUDIT.md" ] && echo "ERROR: Run /system:input-audit first. Closure verification blocks until every input boundary is classified per .claude/rules/garbage-in-garbage-out.md." && exit 1
 echo "Active system: $ACTIVE | Working directory: .system/$ACTIVE/"
 ```
 

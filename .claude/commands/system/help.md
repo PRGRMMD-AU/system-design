@@ -26,6 +26,7 @@ Chain commands (run in order):
   /system:map-system           Map what builds up, what moves, boundaries
   /system:design-flows         Design flow connections between parts
   /system:design-feedback      Design self-correction mechanisms
+  /system:input-audit          Classify every input boundary (gate/sanitise/tolerance)
   /system:verify-closure       Run 5 closure tests
   /system:build-plan           Generate the build plan
 

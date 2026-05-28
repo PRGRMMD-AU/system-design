@@ -21,7 +21,7 @@ Spawns the sys-feedback-designer agent.
 **Creates:** `.system/{active}/feedback/{mechanism-name}.md`, optionally `.system/{active}/system-diagram.excalidraw`
 **Updates:** `.system/{active}/STATE.md`
 
-**After this command:** Run `/system:verify-closure` to test whether every loop is closed.
+**After this command:** Run `/system:input-audit` to classify every input boundary before closure verification.
 
 </objective>
 
@@ -260,7 +260,7 @@ Opening the link launches the file in Obsidian (if Excalidraw plugin is installe
 Read `.system/{active-system}/STATE.md` and update:
 - Stage: verification
 - Last completed: design-feedback
-- Next step: verify-closure
+- Next step: input-audit
 - Mark `design-feedback` checkbox complete
 - Add any decisions made during feedback design
 
@@ -312,7 +312,7 @@ If diagram was generated:
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-Next: /system:verify-closure -- run five closure tests to verify the design is complete
+Next: /system:input-audit -- classify every input boundary (gate / sanitise / accept-with-tolerance)
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
@@ -343,6 +343,6 @@ Next: /system:verify-closure -- run five closure tests to verify the design is c
 - [ ] JSON built section by section with namespaced ID seeds
 - [ ] Render pipeline run and diagram validated against 27-item checklist
 - [ ] STATE.md updated with correct stage and next step
-- [ ] Operator knows next step is `/system:verify-closure`
+- [ ] Operator knows next step is `/system:input-audit`
 
 </success_criteria>
